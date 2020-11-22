@@ -15,12 +15,12 @@ This simple project demonstrates how to manage eventual consistency between micr
 
 You need to register two Postgres Connectors. One for Customer Database and the other for Identity Database. 
 
-<a href="https://github.com/suadev/microservices-change-data-capture-with-debezium/blob/master/_debezium_connectors/configs/customer_config.json">customer_config.json</a> -> Customer Connector Config.
+<a href="https://github.com/suadev/microservices-change-data-capture-with-debezium/blob/main/_debezium_connectors/configs/customer_config.json">customer_config.json</a> -> Customer Connector Config.
 
-<a href="https://github.com/suadev/microservices-change-data-capture-with-debezium/blob/master/_debezium_connectors/configs/identity_config.json">identity_config.json</a> -> Identity Connector Config.
+<a href="https://github.com/suadev/microservices-change-data-capture-with-debezium/blob/main/_debezium_connectors/configs/identity_config.json">identity_config.json</a> -> Identity Connector Config.
 
 
-Use <a href="https://github.com/suadev/microservices-change-data-capture-with-debezium/blob/master/_debezium_connectors/customer.sh">customer.sh</a> and <a href="https://github.com/suadev/microservices-change-data-capture-with-debezium/blob/master/_debezium_connectors/identity.sh">identity.sh</a> to create/update/delete connectors. For instance, to create customer connector;
+Use <a href="https://github.com/suadev/microservices-change-data-capture-with-debezium/blob/main/_debezium_connectors/customer.sh">customer.sh</a> and <a href="https://github.com/suadev/microservices-change-data-capture-with-debezium/blob/main/_debezium_connectors/identity.sh">identity.sh</a> to create/update/delete connectors. For instance, to create customer connector;
 
 ```bash 
 .\customer.sh create_connector
@@ -40,7 +40,7 @@ curl -X GET http://localhost:8083/connectors
 ["identity_outbox_connector", "customer_outbox_connector"]
 ```
 
-Now you are ready to test. See sample postman requests <a href="https://github.com/suadev/microservices-change-data-capture-with-debezium/blob/master/_postman/dev_summit_cdc_debezium.postman_collection.json">here.</a>
+Now you are ready to test. See sample postman requests <a href="https://github.com/suadev/microservices-change-data-capture-with-debezium/blob/main/_postman/dev_summit_cdc_debezium.postman_collection.json">here.</a>
 
 ## Overall Architecture
 
