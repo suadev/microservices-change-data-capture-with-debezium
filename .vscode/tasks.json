@@ -1,0 +1,35 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build-identity",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/src/Services.Identity/Services.Identity.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build-customer",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/src/Services.Customer/Services.Customer.csproj",
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build-notification",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/src/Services.Notification/Services.Notification.csproj",
+            ],
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}

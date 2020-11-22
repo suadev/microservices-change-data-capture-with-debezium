@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "93eb4090-d61f-4879-bc00-d1ffd3e1bd79",
+		"name": "Dev_Summit_CDC_Debezium",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "   \n   \n    {\n        \"FirstName\" :\"Suat\",\n        \"LastName\" :\"Kose\",\n        \"Email\" :\"suat@kose.com\",\n        \"Password\": \"qweryt\"\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Customer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"FirstName\":\"Suat updated\",\n    \"LastName\":\"Kose updated\",\n\t\"Address\": \"Uskudar\",\n\t\"PhoneNumber\":\"5381234567\",\n    \"BirthDate\": \"1989-06-09\",\n    \"Gender\": \"Male\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5005/api/customers/suat@kose.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5005",
+					"path": [
+						"api",
+						"customers",
+						"suat@kose.com"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

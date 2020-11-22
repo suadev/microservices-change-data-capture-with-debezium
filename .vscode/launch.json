@@ -1,0 +1,111 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "identity",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-identity",
+            "program": "${workspaceFolder}/src/Services.Identity/bin/Debug/netcoreapp3.1/Services.Identity.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/src/Services.Identity",
+            "stopAtEntry": false,
+            "internalConsoleOptions": "openOnSessionStart",
+            "launchBrowser": {
+                "enabled": true,
+                "args": "${auto-detect-url}",
+                "windows": {
+                    "command": "cmd.exe",
+                    "args": "/C start ${auto-detect-url}"
+                },
+                "osx": {
+                    "command": "open"
+                },
+                "linux": {
+                    "command": "xdg-open"
+                }
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "ASPNETCORE_URLS": "http://localhost:5001"
+            }
+        },
+        {
+            "name": "customer",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-customer",
+            "program": "${workspaceFolder}/src/Services.Customer/bin/Debug/netcoreapp3.1/Services.Customer.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/src/Services.Customer",
+            "stopAtEntry": false,
+            "internalConsoleOptions": "openOnSessionStart",
+            "launchBrowser": {
+                "enabled": true,
+                "args": "${auto-detect-url}",
+                "windows": {
+                    "command": "cmd.exe",
+                    "args": "/C start ${auto-detect-url}"
+                },
+                "osx": {
+                    "command": "open"
+                },
+                "linux": {
+                    "command": "xdg-open"
+                }
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "ASPNETCORE_URLS": "http://localhost:5005"
+            }
+        },
+        {
+            "name": "notification",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-notification",
+            "program": "${workspaceFolder}/src/Services.Notification/bin/Debug/netcoreapp3.1/Services.Notification.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/src/Services.Notification",
+            "stopAtEntry": false,
+            "internalConsoleOptions": "openOnSessionStart",
+            "launchBrowser": {
+                "enabled": true,
+                "args": "${auto-detect-url}",
+                "windows": {
+                    "command": "cmd.exe",
+                    "args": "/C start ${auto-detect-url}"
+                },
+                "osx": {
+                    "command": "open"
+                },
+                "linux": {
+                    "command": "xdg-open"
+                }
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "ASPNETCORE_URLS": "http://localhost:5010"
+            }
+        },
+        {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach",
+            "processId": "${command:pickProcess}"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "All",
+            "configurations": [
+                "identity",
+                "customer",
+                "notification"
+            ]
+        }
+    ]
+}
