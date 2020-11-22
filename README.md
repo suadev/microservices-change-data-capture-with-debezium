@@ -46,7 +46,7 @@ Now you are ready to test. See sample postman requests <a href="https://github.c
 
 When a new user created on Identity Service, eventual consistency will be obtained for Customer and Notification Services as shown following flow.
 
-<img src="https://github.com/suadev/microservices-change-data-capture-with-debezium/blob/master/_img/user_and_customer_creation_flow.png" />
+<img src="https://raw.githubusercontent.com/suadev/microservices-change-data-capture-with-debezium-private/master/_img/user_and_customer_creation_flow.png?token=ABNFAWZ7YB2GN2BQD2DPDEK7XJAY6" />
 
 ## Tool Set
 
