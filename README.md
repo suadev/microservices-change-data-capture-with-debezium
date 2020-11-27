@@ -11,6 +11,8 @@ This simple project demonstrates how to manage eventual consistency between micr
 * Select 'All' debug option and start debugging. (for vs code)
 * Wait until all microservices are up and running.
 
+**Initiating Databases:** Each service will be created its own database while it's starting for the first time.
+
 ## Register Debezium Postgres Connectors to Kafka Connect
 
 You need to register two Postgres Connectors. One for Customer Database and the other for Identity Database. 
