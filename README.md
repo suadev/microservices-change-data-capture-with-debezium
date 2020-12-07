@@ -2,7 +2,7 @@ This simple project demonstrates how to manage eventual consistency between micr
 
 ## Prerequisites
 
-* DotNet Core SDK 3.1
+* .NET 5.0 SDK
 * Docker Desktop
 
 ## Run in Debug Mode
@@ -52,8 +52,8 @@ When a new user created on Identity Service, eventual consistency will be obtain
 
 ## Tool Set
 
-* Asp.Net Core 3.1
-* Entity Framework Core 3.1
+* Asp.Net 5.0
+* Entity Framework Core 5.0
 * PostgreSQL - Npgsql
 * MediatR
 * Kafka - Zookeeper
